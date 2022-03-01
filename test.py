@@ -1,3 +1,4 @@
+"""
 print("Hello world")
 print("My name is Juan")
 print("Ms White")
@@ -17,6 +18,7 @@ print(5/2)
 print(5//2)
 print(5%2)
 print("\n")
+"""
 print("She said, what you know 'bout love? \n I got what u need")#4.4 Excercises
 print("Life's a beach\nthen you drive")
 print("String is characters that between quotation marks say something")
@@ -43,3 +45,7 @@ print(29*.73)
 print(9*34567890)
 print("Jaiyvish"*10)
 print("Jaiyvish \n"*10)
+print("5+10=" + str(5+10))
+print("15/2=" + str(15/2))
+print("30/2*5=" + str(30/2*5) )
+print("30/2*5=" + str(30//2*5))
