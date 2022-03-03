@@ -37,4 +37,25 @@ pants = 15
 belt = 60
 shoes = 40
 print(user_money)
+print("Buying a hat")
 print(user_money - hat)
+print("You now have the following amount left over")
+print(user_money - hat)
+print("Buying a top")
+print (user_money - hat - top)
+print("You now have the following amount left over")
+print (user_money - hat - top)
+print("Buying pants")
+print (user_money - hat - top - pants)
+print("You now have the following amount left over")
+print (user_money - hat - top - pants)
+print("Buying a belt")
+print (user_money - hat - top - pants - belt)
+print("You now have the following amount left over")
+print (user_money - hat - top - pants - belt)
+print("Buying shoes")
+print (user_money - hat - top - pants - belt - shoes)
+print("You now have the following amount left over")
+print (user_money - hat - top - pants - belt - shoes)
+
+
