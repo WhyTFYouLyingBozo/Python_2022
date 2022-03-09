@@ -54,4 +54,16 @@ print(f"There is a 20% sale on the TV so it will cost {user_TV *.8} dollars")
 user_bitcoins = int(input("How many bitcoins you own?"))
 current_value = 55717.81
 print(f"Your current bitcoin value ${user_bitcoins * current_value } NZD ")
+
+#28 - 30
+user_earnings = int(input("How much do you earn each week?"))
+user_tax = float(input("What is your tax rate?"))
+print(f"In a week after tax you make ${user_earnings * (1 - user_tax) } ")
 """
+#31 - 34
+user_book = input("name a book please?")
+print(f"{user_book.lower()}")
+print(f"{user_book.upper()}")
+print(f"{user_book.title()}")
+user_number = int(input(f"Can I have a number please?"))
+print(f"{user_book * user_number}")
