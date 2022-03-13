@@ -49,8 +49,22 @@ else:
 Question_2 = int(input("How old is Arnold schwarzenegger?"))
 if Question_2 == 73:
 	print("correct")
+	1 + score
 else:
 	print("Incorrect, he is 73 years old")
 
 
+Question_3 = int(input("a number, multiplied by 3, + 4 equals 25, what is that number?"))
+if Question_3 == 7:
+	print("correct")
+	1 + score
+else:
+	print("Incorrect, it was 7 ")
+
+Question_4 = int(input("What are the first three digits of pi?"))
+if Question_4 == 3.14:
+	print("correct")
+	1 + score
+else:
+	print("incorrect it was 3.14")
 
