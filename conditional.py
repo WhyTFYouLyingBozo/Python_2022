@@ -62,9 +62,17 @@ else:
 	print("Incorrect, it was 7 ")
 
 Question_4 = int(input("What are the first three digits of pi?"))
-if Question_4 == 3.14:
+if Question_4 ==3:
 	print("correct")
 	1 + score
 else:
 	print("incorrect it was 3.14")
 
+Question_5 = int(input("What is the current year?"))
+if Question_5 == 2022:
+	print("Correct")
+	1 + score
+else:
+	print("incorrect, it is the year 2022")
+
+print(score)
