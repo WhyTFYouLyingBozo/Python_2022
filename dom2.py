@@ -1,5 +1,5 @@
 from adventurelib import *
-#Room.items = Bag()
+Room.items = Bag()
 
 
 #rooms of game
@@ -26,8 +26,8 @@ outside_pyramid = Room(""" You did it, you made it through, now you may go prese
 
 #connections for rooms
 current_room = kings_tomb
-kings_tomb.south = queens_room
-queens_room.south = hallway
+kings_tomb.south = queens_tomb
+queens_tomb.south = hallway
 hallway.west = scepter_room
 hallway.south = snake_room
 snake_room.south = puzzle_room
@@ -49,7 +49,23 @@ charm_of_bezel.description = "Another one of Cleopatra's assets, can project a v
 the_code = Item("code")
 the_code.description = "This code unlocks, something, this isn't one you keep so remember. 49658"
 
+key1 = Item("key1", "1")
+key1.description = "This key might be ordinary, but will be useful, or not. pick right"
 
+key2 = Item("key2")
+key2.desctiption = "This key might be ordinary, but will be useful, or not. pick right"
+
+flute = Item("flute", "whistle")
+flute.description = "The flute might look ordinary, can silence a crowd however"
+
+limestone_knife = Item("knife", "limestone knife")
+limestone_knife.description = "Limestone was a powerful rock used to build houses and what not, now in knife form, useful, no?"
+
+egypts_heart = Item("gem", "egypts heart")
+egypts_heart.description = "The green and most purest gem, you have earnt it. Hold onto it and give it your heart."
+
+#placing items in rooms
+kings_tomb.items.add(hotemprahs_skin) 
 
 def main():
 	#print(current_room)
