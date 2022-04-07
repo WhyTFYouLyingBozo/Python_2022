@@ -31,8 +31,8 @@ queens_tomb.south = hallway
 hallway.west = scepter_room
 hallway.south = snake_room
 snake_room.west = puzzle_room
-puzzle_room.east = the_wall
-the_wall.north = outside_pyramid 
+puzzle_room.south = the_wall
+the_wall.east = outside_pyramid 
 
 #items
 Item.description = ""
@@ -72,13 +72,23 @@ scepter_room.items.add(key2)
 puzzle_room.items.add(anubis_heart)
 
 current_room = kings_tomb
+inventor = Bag()
+#take item code
+@when("get ITEM")
+@when("take ITEM")
+@when("pick up ITEM")
+def pickup(item):
+	if item in current_room.items:
+		t = current_room.items.take(item)
+		inventory.add(t)
+		print(f"You pick up the {item}")
 
 #direction code so players can move
 @when ("go DIRECTION")
 def travel(direction):
-	global currrent_room
+	global current_room
 	if direction in current_room.exits():
-		currrent_room = current_room.exit(direction)
+		current_room = current_room.exit(direction)
 		print(f"you go {direction}.")
 		print(current_room)
 		print(current_room.exits())
@@ -94,17 +104,7 @@ def look():
 		print("You also see:")
 		for item in current_room.items:
 			print(item)#print out each item
-#take item code
-@when("get ITEM")
-@when("take ITEM")
-@when("pick up ITEM")
-def pickup(item):
-	if item in current_room.items:
-		t = current_room.items.take(item)
-		inventory.add(t)
-		print(f"You pick up the {item}")
-	else:
-		print(f"You don't see a dull {item}")	
+	
 #what items you have
 @when("inventory")
 @when("show inventory")
@@ -114,9 +114,13 @@ def player_inventory():
 	for item in inventory:
 		print(item)
 
+@when("use ITEM")
+def use(item):
+	if inventory.find(item) ==
+
 
 def main():
-	#print(current_room)
+	print(current_room)
 	start()
 
 if __name__ == '__main__':
